@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ isEditMode ? 'Edit Student' : 'Add Student' }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (submit)="onSubmit()" #studentForm="ngForm">
+      <p>
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="FirstName" name="firstName" required [(ngModel)]="studentData.firstName">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-label>Apellido</mat-label>
+          <input matInput placeholder="LastName" name="lastName" required [(ngModel)]="studentData.lastName">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-label>Teléfono</mat-label>
+          <input matInput placeholder="PhoneNumber" name="phoneNumber" required [(ngModel)]="studentData.phoneNumber">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-label>Fecha de Nacimiento</mat-label>
+          <input matInput placeholder="Birthdate" name="birthdate" required [(ngModel)]="studentData.birthdate">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-label>Dirección</mat-label>
+          <input matInput placeholder="Address" name="address" required [(ngModel)]="studentData.address">
+        </mat-form-field>
+      </p>
+      <p>
+        <ng-container>
+          <button mat-button color="primary">{{ isEditMode ? 'Update' : 'Add'}}</button>
+          <a mat-button color="warn" (click)="cancelEdit()">Cancel</a>
+        </ng-container>
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>

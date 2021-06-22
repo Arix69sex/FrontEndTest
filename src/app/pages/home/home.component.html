@@ -1,0 +1,31 @@
+<mat-card style="text-align: center" class="background">
+
+  <ng-container >
+
+    <h1>Bienvenido a Meet Your Roomate</h1>
+
+  </ng-container>
+
+  <ng-container #loggedOut>
+    <h1>Bienvenido a Meet Your Roomate</h1>
+    <h2>Please Login or Register first.</h2>
+    <div class="button-container">
+      <div id="student-area">
+        <button mat-raised-button color="secondary" class="next-button btn btn-primary btn-large" style="margin-right: 3px" (click)="navigateToLogInStudent()">
+          Iniciar Sesión como Estudiante
+        </button>
+        <button mat-raised-button color="secondary" class="next-button btn btn-primary btn-large" style="margin-right: 3px" (click)="navigateToRegisterStudent()">
+          Registrate como Estudiante
+        </button>
+      </div>
+      <div id="lessor-area">
+        <button mat-raised-button color="secondary" class="next-button btn btn-primary btn-large" style="margin-right: 3px" (click)="navigateToLogInLessor()">
+          Iniciar Sesión como Arrendador
+        </button>
+        <button mat-raised-button color="secondary" class="next-button btn btn-primary btn-large" style="margin-right: 3px" (click)="navigateToRegisterLessor()">
+          Registrate como Arrendador
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</mat-card>
